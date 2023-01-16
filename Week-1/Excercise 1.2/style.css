@@ -1,8 +1,6 @@
 body{
-    
     font-family: "Lato";
 }
-
 
 .sidebar {
  display: flex;   
@@ -16,4 +14,50 @@ body{
  margin: 0;
  padding: 0;
 
+}
+
+.main_page {
+    margin-left: 40px;
+}
+
+.main_body{
+    height: auto;
+    padding:20px;
+    background-color: #505251;
+    display: flex;
+}
+
+.main_image{
+    margin-right: 20px;
+}
+
+.main_heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #ffffff;
+}
+
+.options > span {
+    margin-left: 16px;
+    font-size: 14px;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    background-color: #3399ff;
+}
+
+.footer_text {
+    margin-top: 10px;
+    min-width: 28%;
+}
+
+.footer_icons{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 40%;
 }
