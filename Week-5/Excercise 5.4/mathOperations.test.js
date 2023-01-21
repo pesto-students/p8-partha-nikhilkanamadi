@@ -14,6 +14,6 @@ describe('dif test',() => {
 
 describe('product test',() => {
     test('product of 5 * 4 should return 20', () => {
-        expect(testMathOperations.sum(5,4)).toBe(20);
+        expect(testMathOperations.product(5,4)).toBe(20);
     });
 });
