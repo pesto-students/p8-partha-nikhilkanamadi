@@ -1,5 +1,5 @@
 const promiseState = {
-  PENDING: "PENDING",
+  FULLFILLED: "FULLFILLED",
   RESOLVED: "RESOLVED",
   REJECTED: "REJECTED",
 };
@@ -7,7 +7,7 @@ const promiseState = {
 class CustomPromise {
  //! constructor function to set values of promiseState
   constructor(fn) {
-    this.promiseState = promiseState.PENDING;
+    this.promiseState = promiseState.FULLFILLED;
     this.resolverFunction = this.resolverFunction.bind(this);
     this.rejectorFunction = this.rejectorFunction.bind(this);
     this.thenFunction = null;
@@ -17,7 +17,7 @@ class CustomPromise {
 
   //! custom resolve function
   resolverFunction(resolvedResponse) {
-    if (this.promiseState === promiseState.PENDING) {
+    if (this.promiseState === promiseState.FULLFILLED) {
       this.thenFunction && this.thenFunction(resolvedResponse);
     }
     this.promiseState = promiseState.RESOLVED;
@@ -25,7 +25,7 @@ class CustomPromise {
 
   // ! custom reject function   
   rejectorFunction(rejectResponse) {
-    if (this.promiseState === promiseState.PENDING) {
+    if (this.promiseState === promiseState.FULLFILLED) {
       this.catchFunction && this.thenFunction(rejectResponse);
     }
     this.promiseState = promiseState.REJECTED;
